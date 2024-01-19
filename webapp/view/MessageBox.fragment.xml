@@ -1,0 +1,44 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Dialog id="popdialog" class="sapUiSmallMargin" title="Product Details">
+        <f:Form id="FormChange480_12120Dual" editable="false">
+            <f:layout>
+                <f:ResponsiveGridLayout id="_IDGenResponsiveGridLayout1" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false"/>
+            </f:layout>
+                <f:FormContainer id="_IDGenFormContainer1">
+                    <f:formElements>
+                        <f:FormElement id="_IDGenFormElement1" label="Order ID ">
+                            <f:fields>
+                                <Text id="popOrderID"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement id="_IDGenFormElement2" label="Product ID ">
+                            <f:fields>
+                                <Text id="popProductID"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement id="_IDGenFormElement3" label="Unit Price">
+                            <f:fields>
+                                <Text id="popUnitPrice"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement id="_IDGenFormElement4" label="Quantity">
+                            <f:fields>
+                                <Text id="popQuantity"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement id="_IDGenFormElement6" label="Discount">
+                            <f:fields>
+                                <Text id="popDiscount"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement id="_IDGenFormElement5" label="Total">
+                            <f:fields>
+                                <Text id="popTotal"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+        </f:Form>
+        <Button id="Cancel" text="OK" press="onOk"/>
+    </Dialog>
+</core:FragmentDefinition>

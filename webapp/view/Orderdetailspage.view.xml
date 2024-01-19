@@ -1,0 +1,99 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" controllerName="odstest.controller.Orderdetailspage" displayBlock="true">
+    <App id="Orderdetailspage">
+		<pages>
+			<Page id="pgone">
+				<content>
+					<Button id="back" text="Back" press="onNavBack" icon="sap-icon://nav-back"/>
+					<f:SimpleForm id="SimpleForm1" editable="false" layout="ColumnLayout" title="Order Details"  columnsM="2" columnsL="2" columnsXL="2">
+						<f:content>
+							<Label id="_IDGenLabel1" text="Order Id"/>
+							<Text id="nameText" text="{OrderID}"/>
+							<Label id="_IDGenLabel2" text="Customer Id"/>
+							<Text id="_IDGenText1" text="{CustomerID}"/>
+							<Label id="_IDGenLabel3" text="Employee Id"/>
+							<Text id="_IDGenText2" text="{EmployeeID}"/>
+							<Label id="_IDGenLabel4" text="Order Date"/>
+							<Text id="_IDGenText3" text="{OrderDate}"/>
+							<Label id="_IDGenLabel5" text="Required Date"/>
+							<Text id="_IDGenText4" text="{RequiredDate}"/>
+							<Label id="_IDGenLabel6" text="Shipped Date"/>
+							<Text id="_IDGenText5" text="{ShippedDate}"/>
+							<Label id="_IDGenLabel7" text="Ship Via"/>
+							<Text id="_IDGenText6" text="{ShipVia}"/>
+							<Label id="_IDGenLabel8" text="Ship Name"/>
+							<Text id="_IDGenText7" text="{ShipName}"/>
+							<Label id="_IDGenLabel9" text="Ship Address"/>
+							<Text id="_IDGenText8" text="{ShipAddress}"/>
+							<Label id="_IDGenLabel10" text="Ship City"/>
+							<Text id="_IDGenText9" text="{ShipCity}"/>
+							<Label id="_IDGenLabel11" text="Ship Region"/>
+							<Text id="_IDGenText10" text="{ShipRegion}"/>
+							<Label id="_IDGenLabel12" text="Ship Postalcode"/>
+							<Text id="_IDGenText11" text="{ShipPostalCode}"/>
+							<Label id="_IDGenLabel13" text="Ship Country"/>
+							<Text id="_IDGenText12" text="{ShipCountry}"/>
+						</f:content>
+					</f:SimpleForm>
+    				<Panel xmlns="sap.m" width="auto" expanded="true" id="panel0">
+						<Table growing="true" growingScrollToLoad="true" id="orderdetailstable" items="{Order_Details}" mode="SingleSelect">
+							<headerToolbar>
+							<Toolbar id="toolbar1">
+								<ToolbarSpacer id="tbs"></ToolbarSpacer>
+								<Button id="btn1" text="Product Details" icon="sap-icon://detail-more" press="onPopup"/>
+							</Toolbar>
+							</headerToolbar>
+							<items>
+							
+								<ColumnListItem type="Active" id="item0">
+							
+									<cells>		        
+										<Text text="{OrderID}" id="text17"/>		        
+										<Text text="{ProductID}" id="text18"/>		        
+										<Text text="{UnitPrice}" id="text19"/>
+										<Text text="{Quantity}" id="text20"/>
+										<Text text="{Discount}" id="text21"/>
+										<Text text="{parts:[{path:'UnitPrice'},{path:'Quantity'},{path:'Discount'}], formatter:'.formatter.calculateTotal'}" id="text67"/>
+									</cells>		        
+								</ColumnListItem>
+							
+							</items>
+							
+							<columns>
+								<Column id="column4">		        
+									<header>		        
+										<Label text="Order Id" id="label20"/>		        
+									</header>		        
+								</Column>
+								<Column id="column5">		        
+									<header>		        
+										<Label text="Product Id" id="label21"/>		        
+									</header>		        
+								</Column>
+								<Column id="column6">		        
+									<header>		        
+										<Label text="Unit Price" id="label22"/>		        
+									</header>		        
+								</Column>
+								<Column id="column7">		        
+									<header>		        
+										<Label text="Quantity" id="label23"/>		        
+									</header>		        
+								</Column>
+								<Column id="column8">		        
+									<header>		        
+										<Label text="Discount" id="label24"/>		        
+									</header>		        
+								</Column>
+								<Column id="column9">		        
+									<header>		        
+										<Label text="Total" id="label25"/>		        
+									</header>		        
+								</Column>
+							</columns>
+						</Table>
+					</Panel>       
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

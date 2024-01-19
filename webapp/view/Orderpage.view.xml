@@ -1,0 +1,69 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="odstest.controller.Orderpage" displayBlock="true">
+    <Page id="orderpage">
+        <content>
+            <Table items="{/Orders}" id="ordersTable">
+			<headerToolbar>
+				<Toolbar id="_IDGenToolbar1">	
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+				<Title id="ttle1" text="Orders"/>
+				<ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+				<content>					
+				    <SearchField xmlns="sap.m" placeholder="Search for Ship Name" id="searchid" width="25%" search="onSearch"/>										
+				</content>
+				<Button xmlns="sap.m" text="Reset" id="button0" icon="sap-icon://reset" press="onReset"/>					
+				</Toolbar>
+			</headerToolbar>
+			<items>	
+				<ColumnListItem id="cllist1" type="Active" press="onItemPress">	
+					<cells>	
+						<Text text="{OrderID}" id="text0"/>
+						<Text text="{ShipName}" id="text6"/>
+                        <Text text="{ShipAddress}" id="text4"/>
+						<Text text="{ShipCountry}" id="text5"/>	
+						<Text text="{OrderDate}" id="text1"/>	
+						<Text text="{RequiredDate}" id="text2"/>
+						<Text text="{ShippedDate}" id="text3"/>
+					</cells>	
+				</ColumnListItem>	
+			</items>	
+			<columns>	
+				<Column id="column0">	
+					<header>	
+						<Label text="Order Id" id="label11"/>	
+					</header>	
+				</Column>
+				<Column id="column8">	
+					<header>	
+						<Label text="Ship Name" id="label18"/>	
+					</header>	
+				</Column>
+                <Column id="column4">	
+					<header>	
+						<Label text="Ship Address" id="label16"/>	
+					</header>	
+				</Column>
+                <Column id="column5">	
+					<header>	
+						<Label text="Ship Country" id="label17"/>	
+					</header>	
+				</Column>			
+				<Column id="column1">	
+					<header>	
+						<Label text="Order Date" id="label12"/>	
+					</header>	
+				</Column>	
+				<Column id="column2">	
+					<header>	
+						<Label text="Required Date" id="label13"/>	
+					</header>	
+				</Column>
+				<Column id="column3">	
+					<header>	
+						<Label text="Shipped Date" id="label14"/>	
+					</header>	
+				</Column>		
+			</columns>		
+		</Table>
+        </content>
+    </Page>
+</mvc:View>
